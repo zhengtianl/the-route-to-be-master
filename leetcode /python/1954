@@ -1,9 +1,0 @@
-def getLucky(s:str, k:int):
-    s = ''.join(str(ord(c) - ord('a')+1) for c in s)
-    for _ in range(k):
-        t = sum(int(c) for c in s)
-        s = str(t)
-    return t
-
-print(getLucky('abcdefg', 2))
-#ord can get the unicode of the letter thats the most important knowledge we can from this question
