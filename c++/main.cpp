@@ -2,6 +2,13 @@
 #include <cmath>
 #include<cstring>
 #include<vector>
+  struct ListNode {
+      int val;
+      ListNode *next;
+      ListNode() : val(0), next(nullptr) {}
+      ListNode(int x) : val(x), next(nullptr) {}
+      ListNode(int x, ListNode *next) : val(x), next(next) {}
+ };
 
 using namespace std;
 //Basic
@@ -130,9 +137,60 @@ string theOnceString(string input) {
     }
     return "no";
 }
-//the start of the program.
-int main(){
-    printMatrix(20);
+//链表
+ListNode* mergeInBetween(ListNode* list1, int a, int b, ListNode* list2) {
+    //定义到左边界的链表
+    ListNode* le = list1;
+    for (int i = 0; i < a - 1; i++) {
+        le = le->next;
+    }
+    //定义从右边界开始到最末尾的链表
+    ListNode* Ri = list1;
+    for (int i = 0; i <= b; i++) {
+        Ri = Ri->next;
+    }
+    //将左节点的w尾结点指向第二个链表头节点
+    le->next = list2;
 
+    while (list2->next != nullptr) {
+        list2 = list2->next;
+    }
+    //list2的尾节点指向Ri节点的头节点
+    list2->next = Ri;
+    return list1;
+}
+
+class Player{
+public:
+    int x,y;
+    int speed;
+    void Move(int xa, int ya){
+        x += xa * speed;
+        y += ya * speed;
+    }
+    void increment(int *ptr) {
+        (*ptr)++;
+    }
+
+    void incrementRef(int &ref) {
+        ref++;
+    }
+};
+
+
+
+
+
+//the start of the program.
+
+int main() {
+    int x = 42;
+    int *ptr = &x;
+    int &ref = x;
+    Player player;
+    player.increment(ptr);
+    player.incrementRef(ref);
+    std::cout << "x: " << x << std::endl; // Outputs 44
+    delete[] ptr;
     return 0;
 }
