@@ -59,51 +59,72 @@ int diamond(){
 
 //Array
 //
+
+
+class Array {
+public:
+    bool checkXMatrix(vector<vector<int>>& grid) {
+        int n = grid.size();
+        for(int i = 0; i < n; i ++){
+            for(int j = 0; j<n; j++ ){
+                if ( i == j || i + j + 1== n ){
+                    if (grid[i][j] == 0) return false;
+                }
+                else if(grid [i][j] != 0) return false;
+            }
+        }
+        return true;
+    }
 // 输入整数 N，输出一个 N阶的回字形二维数组。数组的最外层为 1，次外层为 2，以此类推。
-void printMatrix(int n) {
-    for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= n; j++) {
-            int up = i, down = n - i + 1, left = j, right = n - j + 1;
-            cout << min(min(up, down), min(left, right)) << ' ';
-        }
-        cout << endl;
-    }
-
-}
-
-bool findNumberIn2DArray(vector<vector<int>>& matrix, int target) {
-    for(int i = 0; i < matrix.size(); i++) {
-        int a = 0;
-        int b = matrix[i].size() - 1;
-        while (a <= b) {
-            int mid = (a + b) / 2;
-            if(target == matrix[i][mid]) return true;
-            else if (target > matrix[i][mid]){
-                a = mid + 1;
+    void printMatrix(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                int up = i, down = n - i + 1, left = j, right = n - j + 1;
+                cout << min(min(up, down), min(left, right)) << ' ';
             }
-            else{
-                b = mid - 1;
+            cout << endl;
+        }
+
+    }
+
+    bool findNumberIn2DArray(vector<vector<int>>& matrix, int target) {
+        for(int i = 0; i < matrix.size(); i++) {
+            int a = 0;
+            int b = matrix[i].size() - 1;
+            while (a <= b) {
+                int mid = (a + b) / 2;
+                if(target == matrix[i][mid]) return true;
+                else if (target > matrix[i][mid]){
+                    a = mid + 1;
+                }
+                else{
+                    b = mid - 1;
+                }
             }
         }
+        return false;
     }
-    return false;
-}
 
-vector<vector<int>> printMatrix(int n, int m) {
-    vector<vector<int>> matrix(n, vector<int>(m));
-    int k = 1;
-    for (int i = 0; i < (n + 1) / 2 && i < (m + 1) / 2; i++) {
-        for (int j = i; j < m - i; j++)
-            matrix[i][j] = k++;
-        for (int j = i + 1; j < n - i; j++)
-            matrix[j][m - i - 1] = k++;
-        for (int j = m - i - 2; j >= i && n - i - 1 != i; j--)
-            matrix[n - i - 1][j] = k++;
-        for (int j = n - i - 2; j > i && m - i - 1 != i; j--)
-            matrix[j][i] = k++;
+    vector<vector<int>> printMatrix(int n, int m) {
+        vector<vector<int>> matrix(n, vector<int>(m));
+        int k = 1;
+        for (int i = 0; i < (n + 1) / 2 && i < (m + 1) / 2; i++) {
+            for (int j = i; j < m - i; j++)
+                matrix[i][j] = k++;
+            for (int j = i + 1; j < n - i; j++)
+                matrix[j][m - i - 1] = k++;
+            for (int j = m - i - 2; j >= i && n - i - 1 != i; j--)
+                matrix[n - i - 1][j] = k++;
+            for (int j = n - i - 2; j > i && m - i - 1 != i; j--)
+                matrix[j][i] = k++;
+        }
+        return matrix;
     }
-    return matrix;
-}
+};
+
+
+
+
 
 
 
@@ -181,6 +202,13 @@ public:
 
 
 
+
+
+
+
+
+
+
 //the start of the program.
 
 int main() {
@@ -190,7 +218,13 @@ int main() {
     Player player;
     player.increment(ptr);
     player.incrementRef(ref);
-    std::cout << "x: " << x << std::endl; // Outputs 44
+    cout << "x: " << x << endl; // Outputs 44
     delete[] ptr;
+    Array sol;
+    vector<vector<int>> testGrid = {{0, 1, 0},
+                                    {1, 0, 1},
+                                    {0, 1, 0}};
+    cout << sol.checkXMatrix(testGrid) << endl;
     return 0;
+
 }
