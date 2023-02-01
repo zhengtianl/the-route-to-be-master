@@ -2,7 +2,9 @@
 #include <cmath>
 #include<cstring>
 #include<vector>
-  struct ListNode {
+#include<algorithm>
+
+struct ListNode {
       int val;
       ListNode *next;
       ListNode() : val(0), next(nullptr) {}
@@ -11,6 +13,7 @@
  };
 
 using namespace std;
+
 //Basic
 int simplemutipky(){
     int  a = 0;
@@ -58,10 +61,13 @@ int diamond(){
 }
 
 //Array
-//
 
 
 class Array {
+private:
+    int age,height;
+    double money;
+
 public:
     bool checkXMatrix(vector<vector<int>>& grid) {
         int n = grid.size();
@@ -120,15 +126,66 @@ public:
         }
         return matrix;
     }
+
+    int maxArea(vector<int>& height) {   //双指针移动长板
+        int i = 0;
+        int j = height.size() - 1;
+        int res = 0;
+        while( i < j){
+            if(height[i] < height[j]){
+                res = max(res, (j-i)*height[i]);
+                i+= 1;
+            }else{
+                res = max (res, (j-i)*height[j]);
+                j -= 1;
+            }
+
+        }
+        return res;
+    }
+
+    //Given an integer array nums of length n and an integer target, find three integers in nums such that the sum is closest to target.
+    // Return the sum of the three integers.
+    // You may assume that each input would have exactly one solution.
+
+    int threeSumClosest(std::vector<int> &nums, int target) {
+        //首先对数组排序
+        sort(nums.begin(), nums.end());
+
+        //最基本的答案
+        int ans = nums[0] + nums[1] + nums[2];
+
+        //数组大小
+        int size = nums.size();
+
+        for (int i = 0; i < size; i++) {
+            //去重
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
+
+            //左右双指针
+            int left = i + 1;
+            int right = size - 1;
+
+            while (left < right) {
+                int sum = nums[i] + nums[left] + nums[right];
+
+                //等于target直接返回
+                if (sum == target) return target;
+
+                //左右指针移动, 逼近最接近的值
+                if (sum > target) {
+                    ans = abs(sum - target) < abs(ans - target) ? sum : ans;
+                    right--;
+                } else {
+                    ans = abs(sum - target) < abs(ans - target) ? sum : ans;
+                    left++;
+                }
+            }
+        }
+        return ans;
+    }
+
 };
-
-
-
-
-
-
-
-
 
 
 //字符串
@@ -189,6 +246,7 @@ public:
         x += xa * speed;
         y += ya * speed;
     }
+
     void increment(int *ptr) {
         (*ptr)++;
     }
@@ -198,33 +256,46 @@ public:
     }
 };
 
-
-
-
-
-
-
-
-
-
-
-
 //the start of the program.
 
-int main() {
-    int x = 42;
-    int *ptr = &x;
-    int &ref = x;
-    Player player;
-    player.increment(ptr);
-    player.incrementRef(ref);
-    cout << "x: " << x << endl; // Outputs 44
-    delete[] ptr;
-    Array sol;
-    vector<vector<int>> testGrid = {{0, 1, 0},
-                                    {1, 0, 1},
-                                    {0, 1, 0}};
-    cout << sol.checkXMatrix(testGrid) << endl;
-    return 0;
+int max(int &x, int &y){
+    x = 10 , y=10;
+    if (x>y) return x;
+    else return y;
+}
 
+
+void swap(double &x, double &y){
+    double t = x; //init a memory space for x, x has no value
+    x = y; //give the x value to the y memory address
+    y = t; // give the y value to the y memory address
+    //vo
+}
+
+inline void foo(){
+    ::puts("dasdkjahsdkjhaskjdh");
+    foo();
+
+}
+int factor(int a){
+    if(a == 1) return 1; //递归重要的是边界
+    return a * factor(a-1);
+}
+char a, g;
+int main() {
+//    int x = 42;
+//    int *ptr = &x;
+//    int &ref = x;
+//      Player player;
+//    player.increment(ptr);
+//    player.incrementRef(ref);
+//    std::cout << "x: " << x << std::endl; // Outputs 44
+// cout << factor(5) <<" ";
+    char b = 'a';
+    char c = 'b';
+    cout << (void*) &b <<endl;
+    cout << (void*) &c <<endl;
+    cout << (void*) &a <<endl;
+    cout << (void*) &g <<endl;
+    return 0;
 }
