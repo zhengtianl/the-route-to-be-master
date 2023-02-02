@@ -189,32 +189,76 @@ public:
 
 
 //字符串
-string replace(string &s, string r) {
-    for (int i = 0; i < s.size(); i++) {
-        if (s.substr(i, r.size()) == r) {
-            s.replace(i, r.size(), "#");
+class string {
+    string replace(string &s, string r) {
+        for (int i = 0; i < s.size(); i++) {
+            if (s.substr(i, r.size()) == r) {
+                s.replace(i, r.size(), "#");
+            }
         }
     }
-}
+
+    string decodeMessage(string key, string message) {
+        char cur = 'a';
+        unordered_map<char, char> rules;
+        string ans = "";
+        rules[' '] = ' '; // mapping for space character
+        for (char c: key) {
+            if (c != ' ' and rules.count(c) == 0) {
+                rules[c] = cur;
+                cur++;
+            }
+        }
+
+        for (char c: message) {
+            ans += rules[c];
+        }
+        return ans;
+
+    }
+
+    string decodeMessage2(string key, string message) {
+        char cur = 'a';
+        unordered_map<char, char>dic;
+        for(char c : key){
+            if(c !=' ' && dic.count(c) == 0){
+                dic[c] = cur;
+                cur += 1;
+            }
+        }
+
+        for(char &c:message){
+            if( c != ' '){
+                c = dic[c];
+            }
+        }
+
+        return message;
+
+    }
 
 
-string theOnceString(string input) {
-    int cnt[26] = {0};
-    int n = input.length();
-    for (int i = 0; i < n; i ++) {
-        if (input[i] >= 'a' && input[i] <= 'z') {
-            cnt[input[i] - 'a']++;
-        } else if (input[i] >= 'A' && input[i] <= 'Z') {
-            cnt[input[i] - 'A']++;
+
+
+    string theOnceString(string input) {
+        int cnt[26] = {0};
+        int n = input.length();
+        for (int i = 0; i < n; i++) {
+            if (input[i] >= 'a' && input[i] <= 'z') {
+                cnt[input[i] - 'a']++;
+            } else if (input[i] >= 'A' && input[i] <= 'Z') {
+                cnt[input[i] - 'A']++;
+            }
         }
-    }
-    for (int i = 0; i < n; i ++) {
-        if (cnt[input[i] - (input[i] >= 'a' ? 'a' : 'A')] == 1) {
-            return string(1, input[i]);
+        for (int i = 0; i < n; i++) {
+            if (cnt[input[i] - (input[i] >= 'a' ? 'a' : 'A')] == 1) {
+                return string(1, input[i]);
+            }
         }
+        return "no";
     }
-    return "no";
-}
+};
+
 //链表
 ListNode* mergeInBetween(ListNode* list1, int a, int b, ListNode* list2) {
     //定义到左边界的链表
