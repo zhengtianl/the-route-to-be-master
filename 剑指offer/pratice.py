@@ -179,7 +179,40 @@ class Solution:
 #                 if j == m:          # 匹配到了t，直接返回
 #                     return i-m+1
 #         return -1
+def fourSum(self, nums, target):
+    nums.sort()
+    ans = []
+    n = len(nums)
+    for i in range(len(nums) - 3):
+        if i > 0 and nums[i] == nums[i - 1]:
+            continue
+        for j in range(i + 1, len(nums) - 2):
+            if j > i + 1 and nums[j] == nums[j - 1]:
+                continue
 
+            left, right = j + 1, n - 1
+            while left < right:
+                Sum = nums[i] + nums[j] + nums[left] + nums[right]
+                if Sum == target:
+                    ans.append([nums[i], nums[j], nums[left], nums[right]])
+                    while left < right and nums[left] == nums[left + 1]:
+                        continue
+                    while left < right and nums[right] == nums[right - 1]:
+                        continue
+                    left += 1
+                    right -= 1
+                elif Sum < target:
+                    left += 1
+                else:
+                    right -= 1
+    return ans
+def twoSum(nums, target):
+    hashtable = dict()
+    for i, num in enumerate(nums):
+        if target - num in hashtable:
+            return [hashtable[target - num], i]
+        hashtable[nums[i]] = i
+    return []
 
 
 if __name__ == "__main__":
@@ -189,6 +222,4 @@ if __name__ == "__main__":
     # mono = MonotonicQueue(a)
     # b = mono.nextGreatnumber(a)
     # print(b)
-    p = "abeabf"
-
-    print(next(p))
+    print(twoSum([3,2,4],6))
