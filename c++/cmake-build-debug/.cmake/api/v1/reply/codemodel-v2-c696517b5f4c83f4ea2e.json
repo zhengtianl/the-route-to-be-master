@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/Develop/the-route-to-be-master/c++/cmake-build-debug",
-		"source" : "D:/Develop/the-route-to-be-master/c++"
+		"build" : "D:/dev/the-route-to-be-master/c++/cmake-build-debug",
+		"source" : "D:/dev/the-route-to-be-master/c++"
 	},
 	"version" : 
 	{

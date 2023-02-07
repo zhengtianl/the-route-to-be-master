@@ -1,6 +1,6 @@
 from collections import deque
 from collections import Counter
-
+from collections import defaultdict
 class ArrayStack:
     def __init__(self):
         self._data = []
@@ -215,6 +215,44 @@ def twoSum(nums, target):
     return []
 
 
+def caesarCipher(s, k):
+    k %= 26
+    tmp = []
+    for char in s:
+        if (char >= 'a' and char <= 'z'):
+            new_char = ord(char) + k
+            if new_char > ord('z'):
+                new_char -= 26
+            tmp.append(chr(new_char))
+
+        elif (char >= 'A' and char <= 'Z'):
+            new_char = ord(char) + k
+            if new_char > ord('Z'):
+                new_char -= 26
+            tmp.append(chr(new_char))
+        else:
+            tmp.append(char)
+    return "".join(tmp)
+
+def alertNames(keyName, keyTime):
+    dic = defaultdict(list)
+    for name, time in zip(keyName, keyTime):
+        hour, minute = int(time[:2]), int(time[3:])
+        realtime = hour * 60 + minute
+        dic[name].append(realtime)
+    ans = []
+    for name, realtime in dic.items():
+        realtime.sort()
+        if any(t2 - t1 <= 60 for t1, t2 in zip(realtime, realtime[2:])):
+            ans.append(name)
+
+    ans.sort()
+    return ans
+
+
+
+
+
 if __name__ == "__main__":
     # a = test1()
     # # quickSort = QuickSortClass(a)
@@ -222,4 +260,6 @@ if __name__ == "__main__":
     # mono = MonotonicQueue(a)
     # b = mono.nextGreatnumber(a)
     # print(b)
-    print(twoSum([3,2,4],6))
+    list1 = ["daniel","daniel","daniel","luis","luis","luis","luis"]
+    list2 = ["10:00","10:40","11:00","09:00","11:00","13:00","15:00"]
+    print(alertNames(keyName = list1,keyTime = list2))

@@ -1,4 +1,4 @@
-# Install script for directory: D:/Develop/the-route-to-be-master/c++
+# Install script for directory: D:/dev/the-route-to-be-master/c++
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Develop/the-route-to-be-master/c++/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/dev/the-route-to-be-master/c++/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

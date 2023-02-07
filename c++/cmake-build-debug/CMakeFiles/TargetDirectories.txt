@@ -1,3 +1,3 @@
-D:/Develop/the-route-to-be-master/c++/cmake-build-debug/CMakeFiles/c__.dir
-D:/Develop/the-route-to-be-master/c++/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Develop/the-route-to-be-master/c++/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/dev/the-route-to-be-master/c++/cmake-build-debug/CMakeFiles/c__.dir
+D:/dev/the-route-to-be-master/c++/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/dev/the-route-to-be-master/c++/cmake-build-debug/CMakeFiles/rebuild_cache.dir

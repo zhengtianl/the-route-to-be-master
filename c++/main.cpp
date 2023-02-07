@@ -326,6 +326,20 @@ int factor(int a){
     return a * factor(a-1);
 }
 char a, g;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 int main() {
 //    int x = 42;
 //    int *ptr = &x;
@@ -335,11 +349,10 @@ int main() {
 //    player.incrementRef(ref);
 //    std::cout << "x: " << x << std::endl; // Outputs 44
 // cout << factor(5) <<" ";
-    char b = 'a';
-    char c = 'b';
-    cout << (void*) &b <<endl;
-    cout << (void*) &c <<endl;
-    cout << (void*) &a <<endl;
-    cout << (void*) &g <<endl;
-    return 0;
+
+
+
+
+
+
 }
