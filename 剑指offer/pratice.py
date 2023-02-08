@@ -249,17 +249,24 @@ def alertNames(keyName, keyTime):
     ans.sort()
     return ans
 
+folder = ["/a", "/a/b", "/c/d", "/c/d/e", "/c/f"]
+folder.sort()
+ans = [folder[0]]
+for f in folder[1:]:
+    m, n  = len(ans[-1]), len(f)
+    if m >= n or (ans[-1] == f[:m] and f[m] == '/'):
+        ans.append(f)
+print(f)
 
 
 
 
-if __name__ == "__main__":
-    # a = test1()
-    # # quickSort = QuickSortClass(a)
-    # # quickSort.QuickSort(0, len(a) - 1)
-    # mono = MonotonicQueue(a)
-    # b = mono.nextGreatnumber(a)
-    # print(b)
-    list1 = ["daniel","daniel","daniel","luis","luis","luis","luis"]
-    list2 = ["10:00","10:40","11:00","09:00","11:00","13:00","15:00"]
-    print(alertNames(keyName = list1,keyTime = list2))
+# if __name__ == "__main__":
+#     # a = test1()
+#     # # quickSort = QuickSortClass(a)
+#     # # quickSort.QuickSort(0, len(a) - 1)
+#     # mono = MonotonicQueue(a)
+#     # b = mono.nextGreatnumber(a)
+#     # print(b)
+#
+#     print(True or False)

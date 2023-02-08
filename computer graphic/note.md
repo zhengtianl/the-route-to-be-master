@@ -1,0 +1,2 @@
+Raster
+Raster (or bitmap) images are generally what you think about when thinking of images. These are the types of images that are produced when scanning or photographing an object. Raster images are compiled using pixels, or tiny dots, containing unique color and tonal information that come together to create the image.
