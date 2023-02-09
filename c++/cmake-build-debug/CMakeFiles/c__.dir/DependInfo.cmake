@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "D:/dev/the-route-to-be-master/c++/main.cpp" "CMakeFiles/c__.dir/main.cpp.obj" "gcc" "CMakeFiles/c__.dir/main.cpp.obj.d"
+  "D:/dev/the-route-to-be-master/c++/main.cpp" "CMakeFiles/c__.dir/main.cpp.obj" "msvc" "CMakeFiles/c__.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links.

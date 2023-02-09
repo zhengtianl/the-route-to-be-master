@@ -3,7 +3,7 @@
 #include<cstring>
 #include<vector>
 #include<algorithm>
-
+using namespace std;
 //struct ListNode {
 //      int val;
 //      ListNode *next;
@@ -335,26 +335,24 @@
 //
 //
 //
-//
+
+
 //
 //
 //
 //
 int main() {
-//    int x = 42;
-//    int *ptr = &x;
-//    int &ref = x;
-//      Player player;
-//    player.increment(ptr);
-//    player.incrementRef(ref);
-//    std::cout << "x: " << x << std::endl; // Outputs 44
-// cout << factor(5) <<" ";
-int n = 1986;
-int sum = 0;
-while(n){
-    sum += (n%10) *(n%10);
-    n /= 10;
-}
-std::cout << sum << std::endl;
+    vector<vector<int>> matrix = {{1,3,5,7},{10,11,16,20},{23,30,34,60}};
+    int target = 3;
+    int n = matrix.size();
+    int m = matrix[0].size();
+    for(int i =0, j = m-1; i < n, j >0; i++, j--)
+    {
+        if (target == matrix[i][j]) cout << true << endl;
+        else if (target < matrix[i][j]) j--;
+        else i++;
+    }
+    cout << false << endl;
+//
 
 }
