@@ -48,4 +48,48 @@ CPU与GPU的通信方式
   所以在游戏中，需要减小图片尺寸减少上传时间，需要打包图集减少上传次数。_
 
 
-  git push
+heightfield:(等高线)
+level of detail 可以动态更新object的details
+mesh tessellation
+triangle-based subdivision(二叉树结构)
+T-junctions 问题：
+
+现在用的最多 QuadTree-Based Subdivison (四叉树)
+
+hull shader
+domain shader
+geogragh shader
+
+mesh shader  Mesh shader
+Mesh shaders is a new geometry pipeline that replaces the vertex shader stage with two new programmable stages-- the object shader stage and the mesh shader stage. In this example, the object shader would take geometry as an input , process it and output some data-- which we call "payload"-- to the mesh shader. 
+网格着色器管道提供了许多好处： 通过着色器单元提高可扩展性，减少基元处理中的固定功能影响。现代 GPU 的通用用途有助于更多种类的应用程序添加更多内核并提高着色器的通用内存和算术性能
+
+Crazy Idea - Volumetric Representation
+marching Cubes
+
+displacement mapping
+采样8个点需要7个插值 两个mip level， mipmap
+
+
+directStorage & DMA
+往GPU写数据
+
+浮点精度问题导致屏幕抖动
+
+Camer-Relative Rendering 重置世界坐标系
+
+Decorator 
+
+Road and Decals Rendering
+
+# 天空模型
+Analytic Atmosphere Appearance Modeling
+
+# 渲染pipeline
+1. vertex shader 
+2. shape Assembly 
+3. Geometry Shader
+4. test and blending
+5. FRAGMENT shader
+6. RASTERIZATION
+
