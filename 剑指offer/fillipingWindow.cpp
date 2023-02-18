@@ -1,8 +1,9 @@
 //
 // Created by 45807 on 2023/2/5.
 //
-
+#include "iostream"
 #include "fillipingWindow.h"
+using namespace std;
     unordered_map <char, int> ori, cnt;
 
     bool check() {
