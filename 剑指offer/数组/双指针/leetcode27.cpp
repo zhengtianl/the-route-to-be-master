@@ -17,7 +17,6 @@ int removeElement(vector<int>& nums, int val)
         }
     }
     return slow;
-
 }
 
 int main()

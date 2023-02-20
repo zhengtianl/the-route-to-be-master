@@ -29,7 +29,8 @@ bool validPalindrome(string s)
 
 
 int main(){
-    string a = "abca";
+    string a;
+    cin >> a;
     cout << validPalindrome(a) << endl;
 
 }
