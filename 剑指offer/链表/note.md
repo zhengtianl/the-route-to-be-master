@@ -34,5 +34,6 @@ ListNode* reverseList(ListNode* head)
     return pre;
 }
 
+//链表需要一个参与循环一个不参与循环的指针
 
 ```
