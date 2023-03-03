@@ -17,6 +17,25 @@ public:
         for(int i = 1; i <= n ;i ++) ans.push_back(abs(fn[i-1] - bn[i+1]));
         return ans;
     }
+
+    vector<int> leftRigthDifference2(vector<int>& nums)
+    {
+        int n = nums.size();
+        int left = 0, right = 0;
+        for(int i = 1; i < n; i++){
+            right += nums[i];
+        }
+        vector<int> ans = {abs(left - right)};
+        for (int i = 1; i < n; i++) {
+            left += nums[i-1];
+            right -= nums[i];
+
+            ans.push_back(abs(left - right));
+        }
+        return ans;
+    }
+
+
 };
 
 

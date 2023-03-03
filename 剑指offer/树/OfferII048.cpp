@@ -14,6 +14,7 @@
  */
 #include "Tree.h"
 #include "iostream"
+#include "vector"
 class Codec {
 public:
     void rserialize(TreeNode* root, string& str) {
