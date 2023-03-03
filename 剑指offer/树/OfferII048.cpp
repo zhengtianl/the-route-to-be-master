@@ -15,6 +15,9 @@
 #include "Tree.h"
 #include "iostream"
 #include "vector"
+#include "string"
+#include "list"
+using namespace std;
 class Codec {
 public:
     void rserialize(TreeNode* root, string& str) {
