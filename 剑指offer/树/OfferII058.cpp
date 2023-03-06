@@ -1,6 +1,8 @@
 //
 // Created by StarkLu on 2023/3/4.
 //
+#include "vector"
+using namespace std;
 class MyCalendar {
     vector<pair<int, int>> booked;
 
