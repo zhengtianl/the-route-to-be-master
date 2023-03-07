@@ -1,4 +1,6 @@
 #include "queue"
+#include "vector"
+using namespace std;
 class Solution {
 public:
     vector<vector<int>> kSmallestPairs(vector<int>& nums1, vector<int>& nums2, int k) {
@@ -12,7 +14,8 @@ public:
                 if (heap.size() < k) {
                     heap.push({nums1[i], nums2[j]});
                 }
-                else if (nums1[i] + nums2[j] < heap.top().first + heap.top().second)  {
+                else if (nums1[i] + nums2[j] < heap.top().first + heap.top().second)  
+                {
                     heap.pop();
                     heap.push({nums1[i], nums2[j]});
                 }

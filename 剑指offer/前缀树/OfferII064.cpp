@@ -5,9 +5,8 @@ using namespace std;
 class MagicDictionary {
 public:
     /** Initialize your data structure here. */
-    MagicDictionary() {
-
-    }
+    MagicDictionary() {}
+    ~MagicDictionary(){}
     
     void buildDict(vector<string> dictionary) {
         words = dictionary;
@@ -16,7 +15,8 @@ public:
     bool search(string searchWord) {
         for(auto& word: words)
         {
-            if(word.length() != searchWord.length()){
+            if(word.length() != searchWord.length())
+            {
                 continue;
             }
 
