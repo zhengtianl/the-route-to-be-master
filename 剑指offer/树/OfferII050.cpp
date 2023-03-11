@@ -10,7 +10,7 @@
  * };
  */
 #include "iostream"
-#include "Tree.h"
+#include "../dataStruct.h"
 using namespace std;
 class Solution {
 public:

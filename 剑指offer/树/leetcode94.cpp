@@ -1,5 +1,5 @@
 #include "iostream"
-#include "Tree.h"
+#include "../dataStruct.h"
 #include "vector"
 using namespace std;
 /**

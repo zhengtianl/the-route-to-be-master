@@ -9,7 +9,7 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-#include "Tree.h"
+#include "../dataStruct.h"
 #include "vector"
 #include "vector"
 using namespace std;

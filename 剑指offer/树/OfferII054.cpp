@@ -7,7 +7,7 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-#include "Tree.h"
+#include "../dataStruct.h"
 class Solution {
 public:
     int sum = 0;
