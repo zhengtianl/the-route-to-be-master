@@ -9,3 +9,4 @@ class Solution:
                     count += 1
         ans = min(n, count)
         return ans
+    
