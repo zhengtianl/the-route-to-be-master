@@ -1,0 +1,17 @@
+//
+// Created by StarkLu on 2023/4/5.
+//
+#include "algorithm"
+using namespace std;
+class Solution {
+public:
+    int commonFactors(int a, int b) {
+        int res = 0;
+        for(int i = 1; i <= std::min(a,b); i++){
+            if( a % i == 0 && b % i == 0){
+                res += 1;
+            }
+        }
+        return res;
+    }
+};
