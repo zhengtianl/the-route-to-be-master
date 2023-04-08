@@ -25,4 +25,27 @@ public:
         reverse(ans.begin(), ans.end());
         return ans;
     }
+
+    string baseNeg3(int n){
+        if(n == 0){
+            return 0;
+        }
+        string res = "";
+        while(n != 0)
+        {
+            char cur_bit = abs(n % 2) + '0';
+            n = - (n / 2);
+            res = cur_bit + res;
+
+        }
+        return res;
+    }
+
+
 };
+int main()
+{
+    Solution s;
+    s.baseNeg2(11);
+    cout << s.baseNeg2(11) << endl;
+}
