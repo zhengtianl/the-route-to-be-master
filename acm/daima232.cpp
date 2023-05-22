@@ -16,9 +16,8 @@ public:
     }
     int pop()
     {
-        if(stOut.empty())
-        {
-            while(!stIn.empty())
+        while(stOut.empty()) {
+            while (!stIn.empty())
             {
                 stOut.push(stIn.top());
                 stIn.pop();
@@ -27,6 +26,7 @@ public:
         int result = stOut.top();
         stOut.pop();
         return result;
+
     }
 
     int peek()
@@ -34,8 +34,8 @@ public:
         int res = this -> pop();
         stOut.push(res);
         return res;
-
     }
+
     bool empty()
     {
         return stIn.empty() && stOut.empty();
