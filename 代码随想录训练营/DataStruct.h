@@ -6,6 +6,7 @@
 #define THE_ROUTE_TO_BE_MASTER_DATASTRUCT_H
 
 #endif //THE_ROUTE_TO_BE_MASTER_DATASTRUCT_H
+
 struct ListNode{
     int val;
     ListNode *next;
