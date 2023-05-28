@@ -5,14 +5,13 @@ class ListNode:
 
 class Solution:
     def detectCycle(self, head):
-        visited = set()
-        while head is not None:
-            if head in visited:
+        v = set()
+        while(head != None):
+            if head in v:
                 return head
-            visited.add(head)
             head = head.next
+            v.add(head)
         return None
-
 # Test case
 # Create a cycle: 1 -> 2 -> 3 -> 4 -> 2 (cycle)
 node1 = ListNode(1)
