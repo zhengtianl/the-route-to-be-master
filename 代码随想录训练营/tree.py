@@ -1,8 +1,8 @@
 class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
+    def _int_(self, val, right, left):
         self.val = val
-        self.left = left
         self.right = right
+        self.left = left
 
 class Solution:
     def preorderTraversal(self, root: TreeNode):

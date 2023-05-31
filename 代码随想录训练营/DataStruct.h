@@ -16,7 +16,7 @@ struct ListNode{
 
 };
 
-struct TreeNode {
+struct TreeNode{
     int val;
     TreeNode *left;
     TreeNode *right;
