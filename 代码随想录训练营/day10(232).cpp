@@ -10,7 +10,6 @@ public:
     void push(int x){
         StackIn.push(x);
     }
-
     int pop(){
         if(StackOut.empty()){
             while(!StackIn.empty()){
