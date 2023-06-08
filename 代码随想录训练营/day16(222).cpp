@@ -15,21 +15,21 @@ class Solution {
 public:
     int countNodes(TreeNode* root) {
         if (root == nullptr) return 0;
-//        TreeNode* left = root -> left;
-//        TreeNode* right = root -> right;
-//        int Depth_left = 0;
-//        int Depth_right = 0;
-//        while(left){
-//            left = left -> left;
-//            Depth_left ++;
-//        }
-//        while(right){
-//            right = right -> right;
-//            Depth_right ++;
-//        }
-//        if(Depth_left == Depth_right){
-//            return (2 << Depth_left) - 1;
-//        }
+        TreeNode* left = root -> left;
+        TreeNode* right = root -> right;
+        int Depth_left = 0;
+        int Depth_right = 0;
+        while(left){
+            left = left -> left;
+            Depth_left ++;
+        }
+        while(right){
+            right = right -> right;
+            Depth_right ++;
+        }
+        if(Depth_left == Depth_right){
+            return (2 << Depth_left) - 1;
+        }
         return countNodes(root -> right) + countNodes(root -> left) + 1;
     }
 };
