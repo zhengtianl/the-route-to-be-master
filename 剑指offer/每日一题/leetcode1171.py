@@ -1,43 +1,58 @@
 import collections
+
 class Linklist:
-    def __init__(self, val = 0, next = None):
+    def __init__(self, val, next=None):
         self.val = val
         self.next = next
     
 class Solution:
     def removeZeroSumSublists(self, head):
-        dummy = Linklist(next = head, val = 0)
-        seen = {} #记录前缀和
-        preixSum, cur = 0, dummy
+        dummy = Linklist(next=head, val=0)
+        seen = {}  # Records prefix sums
+        prefixSum, cur = 0, dummy
+        
         while cur:
-            preixSum += cur.val
-            seen[preixSum] = cur
+            prefixSum += cur.val
+            seen[prefixSum] = cur
             cur = cur.next
             
-        preixSum, cur = 0, dummy
+        prefixSum, cur = 0, dummy
+        
         while cur:
-            preixSum += cur.val
-            cur.next = seen[preixSum].next
+            prefixSum += cur.val
+            cur.next = seen[prefixSum].next
             cur = cur.next
+        
         return dummy.next
-# Test case
-# Input: 1 -> 2 -> -3 -> 3 -> 1
-# Output: 3 -> 1
 
-# Create the linked list
-head = Linklist(val=1, next=Linklist(val=2, next=Linklist(val=-3, next=Linklist(val=3, next=Linklist(val=1, next=None)))))
+# Read the number of queries
+num_queries = int(input())
 
-# Create an instance of the Solution class
-solution = Solution()
+# Process each query
+for _ in range(num_queries):
+    # Read the input for the linked list
+    input_list = list(map(int, input().split()))
 
-# Call the removeZeroSumSublists method
-result = solution.removeZeroSumSublists(head)
+    # Create the linked list
+    head = None
+    tail = None
 
-# Print the result
-while result:
-    print(result.val, end=" -> ")
-    result = result.next
-print("None")
+    for val in input_list:
+        if head is None:
+            head = Linklist(val)
+            tail = head
+        else:
+            tail.next = Linklist(val)
+            tail = tail.next
 
- 
-           
+    # Create an instance of the Solution class
+    solution = Solution()
+
+    # Call the removeZeroSumSublists method
+    result = solution.removeZeroSumSublists(head)
+
+    # Print the result
+    while result:
+        print(result.val, end=" -> ")
+        result = result.next
+    print("None")
