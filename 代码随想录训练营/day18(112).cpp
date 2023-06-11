@@ -1,11 +1,10 @@
 //
 // Created by StarkLu on 2023/6/10.
 //
-#include "iostream"
 #include "DataStruct.h"
-
-
+#include "iostream"
 class Solution{
+    private:
     bool traversal(TreeNode* root, int target){
         //确定结束条件
         if (root -> right == nullptr && root -> left == nullptr && target == 0) return true;
@@ -21,13 +20,12 @@ class Solution{
             if (traversal(root -> right, target)) return true;
             target += root -> right -> val;
         }
-
         return false;
     }
+    public:
     bool hasPathSum(TreeNode* root, int targetSum) {
-        return traversal(root, targetSum);
+        if (root == nullptr) return false;
+        return traversal(root, targetSum - root -> val);
     }
-
-
 
 };
