@@ -13,7 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="684427b9-0043-49c1-864c-3f07122c1d53" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/代码随想录训练营/day23(538).py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/代码随想录训练营/day24(77).py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +197,7 @@
       <workItem from="1686737767783" duration="1197000" />
       <workItem from="1686817645576" duration="76000" />
       <workItem from="1686911974419" duration="7000" />
-      <workItem from="1686912034715" duration="1683000" />
+      <workItem from="1686912034715" duration="2217000" />
     </task>
     <servers />
   </component>
