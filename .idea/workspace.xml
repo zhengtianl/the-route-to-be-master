@@ -13,9 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="684427b9-0043-49c1-864c-3f07122c1d53" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/代码随想录训练营/day23(669).cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/代码随想录训练营/day18(113).cpp" beforeDir="false" afterPath="$PROJECT_DIR$/代码随想录训练营/day18(113).cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +70,7 @@
       <recent name="D:\dev\the-route-to-be-master\剑指offer\每日一题" />
     </key>
   </component>
-  <component name="RunManager" selected="C/C++ File.day1(2).cpp">
+  <component name="RunManager">
     <configuration name="day13(239).cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="the-route-to-be-master" TARGET_NAME="day13(239).cpp" CONFIG_NAME="day13(239).cpp">
       <option name="sourceFile" value="代码随想录训练营\day13(239).cpp" />
       <method v="2">
@@ -196,7 +194,8 @@
       <workItem from="1686618981413" duration="70000" />
       <workItem from="1686619643033" duration="1172000" />
       <workItem from="1686737767783" duration="1197000" />
-      <workItem from="1686817645576" duration="38000" />
+      <workItem from="1686817645576" duration="76000" />
+      <workItem from="1686911974419" duration="7000" />
     </task>
     <servers />
   </component>
