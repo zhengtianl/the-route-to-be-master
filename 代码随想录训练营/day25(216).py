@@ -1,21 +1,21 @@
-
 class Solution:
     def combinationSum3(self, k: int, n: int) -> List[List[int]]:
         res = []
         path = []
-        self.backtracking(n, k, 0, 1, res, path)
+        self.helper(0, n,k,res,path,1)
         return res
 
-    def backtracking(self, targetSum, k, currentSum, startIndex, res, path):
-        if currentSum > targetSum:
+    def helper(self, currentSum, targetSum, k, res, path, startIndex):
+        if targetSum < currentSum:
             return
-        if currentSum == targetSum and len(path) == k:
-            res.append(path[:])  # Append a copy of the path
+        if targetSum == currentSum and len(path) == k:
+            res.append(path[:])
             return
-        for i in range(startIndex, 10):
+
+        for i in range(startIndex,10):
             currentSum += i
             path.append(i)
-            self.backtracking(targetSum, k, currentSum, i + 1, res, path)
+            self.helper(currentSum, targetSum, k, res, path, i
+                        +1)
             currentSum -= i
             path.pop()
-
