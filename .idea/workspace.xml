@@ -13,8 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="684427b9-0043-49c1-864c-3f07122c1d53" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/day24(216).cpp" beforeDir="false" afterPath="$PROJECT_DIR$/day25(216).cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/代码随想录训练营/day23(17).py" beforeDir="false" afterPath="$PROJECT_DIR$/代码随想录训练营/day25(17).py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/代码随想录训练营/day24(77).cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +66,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\dev\the-route-to-be-master\代码随想录训练营" />
       <recent name="D:\dev\the-route-to-be-master\acm" />
       <recent name="D:\dev\the-route-to-be-master\acm\basicalgorithm\binarysearch" />
       <recent name="D:\dev\the-route-to-be-master\剑指offer\每日一题" />
@@ -200,7 +201,8 @@
       <workItem from="1686912034715" duration="2354000" />
       <workItem from="1686922835352" duration="32000" />
       <workItem from="1686923267805" duration="345000" />
-      <workItem from="1686967902672" duration="703000" />
+      <workItem from="1686967902672" duration="756000" />
+      <workItem from="1687062109004" duration="903000" />
     </task>
     <servers />
   </component>
