@@ -2,17 +2,24 @@
 #include "algorithm"
 using namespace std;
 void quickSort(int q[],int l,int r){
-    if(l>=r) return;
-    int i = l,j=r,x = q[l];
-    while(i<j){
-        while(q[i]<x) i++;
-        while(q[j]>x) j--;
-        if(i<j){
+    //递归结束条件
+    int i  = l;
+    int j = r;
+    if (i >= j) return;
+    int mid = q[l];
+    while( i < j){
+        if (q[i] <= mid){
+            i ++;
+        }
+        if (q[j] >= mid){
+            j --;
+        }
+        if(i < j){
             swap(q[i], q[j]);
         }
     }
-    quickSort(q,l,j-1);
-    quickSort(q,j+1,r);
+    quickSort(q, l, j - 1);
+    quickSort(q, j+1, r);
 }
 
 int main()
