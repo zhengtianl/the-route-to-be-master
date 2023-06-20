@@ -13,10 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="684427b9-0043-49c1-864c-3f07122c1d53" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/代码随想录训练营/day25(39).py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/代码随想录训练营/day27(131).py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/代码随想录训练营/day27(39).py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/代码随想录训练营/day27(40).py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Realtest/wangyi.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +72,7 @@
       <recent name="D:\dev\the-route-to-be-master\剑指offer\每日一题" />
     </key>
   </component>
-  <component name="RunManager" selected="C/C++ File.quicksort.cpp">
+  <component name="RunManager" selected="C/C++ File.day6.cpp">
     <configuration name="day13(239).cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="the-route-to-be-master" TARGET_NAME="day13(239).cpp" CONFIG_NAME="day13(239).cpp">
       <option name="sourceFile" value="代码随想录训练营\day13(239).cpp" />
       <method v="2">
@@ -106,11 +103,6 @@
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="C/C++ File.quicksort.cpp" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -214,7 +206,14 @@
       <workItem from="1687077823882" duration="983000" />
       <workItem from="1687079003536" duration="36000" />
       <workItem from="1687079536022" duration="37000" />
-      <workItem from="1687145407318" duration="5596000" />
+      <workItem from="1687145407318" duration="5962000" />
+      <workItem from="1687153347454" duration="606000" />
+      <workItem from="1687160557365" duration="35000" />
+      <workItem from="1687161985348" duration="10000" />
+      <workItem from="1687162135211" duration="741000" />
+      <workItem from="1687165571941" duration="34000" />
+      <workItem from="1687170652825" duration="2000" />
+      <workItem from="1687171238088" duration="234000" />
     </task>
     <servers />
   </component>
