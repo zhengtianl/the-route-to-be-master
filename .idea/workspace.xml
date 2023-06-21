@@ -13,7 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="684427b9-0043-49c1-864c-3f07122c1d53" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Realtest/wangyi.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/代码随想录训练营/day29(491).py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -213,7 +213,12 @@
       <workItem from="1687162135211" duration="741000" />
       <workItem from="1687165571941" duration="34000" />
       <workItem from="1687170652825" duration="2000" />
-      <workItem from="1687171238088" duration="234000" />
+      <workItem from="1687171238088" duration="274000" />
+      <workItem from="1687176175458" duration="1987000" />
+      <workItem from="1687226957102" duration="6538000" />
+      <workItem from="1687246552314" duration="599000" />
+      <workItem from="1687249802192" duration="2358000" />
+      <workItem from="1687307069542" duration="860000" />
     </task>
     <servers />
   </component>
