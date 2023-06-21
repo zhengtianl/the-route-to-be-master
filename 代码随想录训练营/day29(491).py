@@ -9,7 +9,7 @@ class Solution:
         #递归结束条件当路径长度大于2 res push进入
         if len(path) > 1:
             res.append(path[:])
-            #加上 return 只记录根节点的值不加return记录所有的值
+            #加上 return 只记录叶子节点的值不加return记录所有的值
         used = set()
         for i in range(startIndex, len(nums)):
             if (path and nums[i] < path[-1] or nums[i] in used):
