@@ -1,3 +1,4 @@
+from typing import List
 class Solution:
     def findItinerary(self, tickets: List[List[str]]) -> List[str]:
         tickets.sort() # 先排序，这样一旦找到第一个可行路径，一定是字母排序最小的
