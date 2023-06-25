@@ -37,4 +37,5 @@ class Solution:
         result = []
         chessboard = ['.' * n for _ in range(n)]
         backtracking(0, chessboard, result)
+
         return result
