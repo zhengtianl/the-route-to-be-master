@@ -8,7 +8,8 @@ public:
     LRUCache(int capacity) : _capacity(capacity) {}
 
     int get(int key) {
-        std::unique_lock<std::mutex> lock(m);
+        std::
+        <std::mutex> lock(m);
         auto it = cache.find(key);
         if (it == cache.end()) return -1;
         touch(it);
