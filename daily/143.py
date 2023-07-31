@@ -2,7 +2,7 @@ class Solution:
     def reorderList(self, head: ListNode) -> None:
         if not head:
             return
-        
+
         vec = list()
         node = head
         while node:
@@ -17,7 +17,6 @@ class Solution:
                 break
             vec[j].next = vec[i]
             j -= 1
-        
         vec[i].next = None
-
-# Path: daily/144.py
+        
+        
