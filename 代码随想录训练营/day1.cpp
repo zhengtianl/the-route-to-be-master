@@ -18,7 +18,13 @@ int search(vector<int>& nums, int target)
 
 int main()
 {
-    vector<int> nums = {1,2,3,4,5,6,9};
+    
+    int n;
+    cin >> n;
+    vector<int> nums(n);
+    for(int i = 0; i < n; i++){
+        cin >> nums[i];
+    }
     int target = 9;
     cout << search(nums, target) << endl;
 }
