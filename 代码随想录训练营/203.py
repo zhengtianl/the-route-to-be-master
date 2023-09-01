@@ -11,6 +11,7 @@ def removeElements(nums, val):
             nums[slow] = nums[fast]
             slow += 1
     return slow
-nums = [3,2,2,3]
-val = 3
+n = int(input())
+nums = [int(input()) for _ in range(n)]
+val = int(input())
 print(removeElements(nums, val))
