@@ -9,7 +9,9 @@ def miniLengthArray(s, nums):
                 res = min(res, right - left + 1)
                 cur_sum -= nums[left]
                 left += 1
-        rigth += 1
+        right += 1
     return res if res != float('inf') else 0
 
-n = int(input())
+s = int(input())
+nums = [int(x) for x in input().split()]
+print(miniLengthArray(s, nums))

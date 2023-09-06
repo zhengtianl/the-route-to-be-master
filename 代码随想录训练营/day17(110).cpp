@@ -1,4 +1,5 @@
 #include "iostream"
+#include "DataStruct.h"
 using namespace std;
 
 class Solution {
