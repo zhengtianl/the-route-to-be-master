@@ -1,24 +1,34 @@
-def quickSort(q, l, r):
-    if l >= r:
+def quick_sort(array, left, right):
+    if left >= right:
         return
-    i, j = l, r
-    x = q[l]
-    while i < j:
-        while q[i] < x:
-            i += 1
-        while q[j] > x:
-            j -= 1
-        if i < j:
-            q[i], q[j] = q[j], q[i]
-    quickSort(q, l, j - 1)
-    quickSort(q, j + 1, r)
+    low = left
+    high = right
+    key = array[low]
+    while left < right:
+        while left < right and array[right] > key:
+            right -= 1
+        array[left] = array[right]
+        while left < right and array[left] <= key:
+            left += 1
+        array[right] = array[left]
+    array[right] = key
+    quick_sort(array, low, left - 1)
+    quick_sort(array, left + 1, high)
+    
+nums = [1,2,4,6]
+quick_sort(nums, 0, 3)
+print(nums)
+    
+    
+    
 
-n = int(input())
-arr = list(map(int, input().split()))
 
-quickSort(arr, 0, n - 1)
 
-print("Sorted array:", end=" ")
-for i in range(n):
-    print(arr[i], end=" ")
-print()
+    
+    
+    
+    
+    
+
+
+
