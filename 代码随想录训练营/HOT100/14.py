@@ -6,7 +6,7 @@ class Solution:
         ans = 0
         for right in range(n):
             if s[right] in hashtable:
-                left = max(left, hashtable[s[right]]+1)
+                left = max(left, right)
             hashtable[s[right]] = right
             ans = max(ans, right - left + 1)
         return ans

@@ -1,5 +1,5 @@
 class Solution:
-    def generateParenthesis(self, n: int) -> List[str]:
+    def generateParenthesis(self, n: int):
         ans = []
         def backtrack(s, left, right):
             if len(s) == 2 * n:
@@ -11,3 +11,7 @@ class Solution:
                 backtrack(s + ')', left, right + 1)
         backtrack('', 0, 0)
         return ans
+n = 5
+solution = Solution()
+nums = solution.generateParenthesis(n)
+print(nums)

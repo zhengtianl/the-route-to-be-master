@@ -1,3 +1,11 @@
+class linkList:
+    def __init__(self):
+        self.val = None
+        self.next = None
+        
+
+
+
 def removeElements(nums, val):
     """
     203. 移除链表元素
