@@ -1,34 +1,16 @@
-def quick_sort(array, left, right):
-    if left >= right:
-        return
-    low = left
-    high = right
-    key = array[low]
-    while left < right:
-        while left < right and array[right] > key:
-            right -= 1
-        array[left] = array[right]
-        while left < right and array[left] <= key:
-            left += 1
-        array[right] = array[left]
-    array[right] = key
-    quick_sort(array, low, left - 1)
-    quick_sort(array, left + 1, high)
-    
-nums = [1,2,4,6]
-quick_sort(nums, 0, 3)
-print(nums)
-    
-    
-    
-
-
-
-    
-    
-    
-    
-    
-
-
-
+def quick_sort(arr):  
+    if len(arr) <= 1:  
+        return arr  
+    pivot = arr[0]  
+    left = []  
+    right = []  
+    for i in range(1, len(arr)):  
+        if arr[i] < pivot:  
+            left.append(arr[i])  
+        else:  
+            right.append(arr[i])  
+    return quick_sort(left) + [pivot] + quick_sort(right)  
+  
+arr = [5, 2, 8, 3, 9, 1]  
+sorted_arr = quick_sort(arr)  
+print(sorted_arr)
