@@ -27,7 +27,6 @@ bool validPalindrome(string s)
 }
 
 
-
 int main(){
     string a;
     cin >> a;
