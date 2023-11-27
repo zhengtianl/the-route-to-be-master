@@ -15,3 +15,4 @@ nums = [1, 2, 2, 3, 4, 4, 5]
 solution = Solution()
 nums1 = solution.topKFrequent(nums, 3)
 print(nums1)
+
