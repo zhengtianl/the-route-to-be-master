@@ -1,17 +1,9 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        left = 0
-        hashtable = {}
-        n = len(s)
-        ans = 0
-        for right in range(n):
-            if s[right] in hashtable:
-                left = max(left, hashtable[right] + 1)
-        
-            hashtable[s[right]] = right
-            ans = max(ans, right - left + 1)
-        return ans
-        
-            
-        
-    
+        dic, res, i = {}, 0, -1
+        for j in range(len(s)):
+            if s[j] in dic:
+                i = max(dic[s[j]], i)
+            dic[s[j]] = j
+            res = max(res, j - i)
+        return res
