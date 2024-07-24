@@ -16,6 +16,17 @@ def search(nums, target):
             left = mid + 1
     return -1
 
+def removeElement(nums, target):
+    slow = 0
+    fast = 0
+    while slow < fast:
+        if nums[slow] != target:
+            nums[slow] = nums[fast]
+            slow += 1
+        fast += 1
+    return slow
+
+
 n = int(input())
 nums = [int(input()) for _ in range(n)]
 target = int(input())
