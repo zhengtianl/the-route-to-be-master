@@ -16,7 +16,6 @@ def search(nums, target):
             left = mid + 1
     return -1
 
-
 n = int(input())
 nums = [int(input()) for _ in range(n)]
 target = int(input())
